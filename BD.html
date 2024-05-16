@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>ADOPTNETDAY </title>
+    <meta name="Bases de Datos" content="Pagina donde se documenta todo lo relacionado con la base de datos de detras del codigo.">
+    <link href="estiloss.css" rel="stylesheet" type="text/css">
+    <meta charset="UTF-8">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="banner">
+                <img src="IMG/Pata_lobo.jpg" height="100" width="130" alt="">
+                <h1>ADOPTNETDAY</h1>
+                <h3>Documentación de la Aplicación</h3>
+            </div>
+            <nav>
+                <ul class="menu top">
+                    <li><a href="Inicio_doc.html"><strong>Inicio</strong></a></li>
+                    <li><a href="Programa_java.html"><strong>Programa</strong></a></li>
+                    <li><a href="Incidencias.html"><strong>Incidencias</strong></a></li>
+                    <li><a href="ResultadoFinal.html" target="_blank"><strong>Vista Gráfica</strong></a></li>
+                </ul>
+            </nav>
+        </div>
+        <main>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        
+
+            <pre>
+            Sobre la sección de bases de datos, partimos de 4 secciones para realizar el proceso completo:
+            </pre>
+       
+            <h2 style="background:rgb(199, 158, 224); color:white; font-family: Times New Roman"><strong>          Diseño conceptual (entidad-relación) y modelo lógico-relacional </strong></h2>
+            <pre>  
+            En este caso presentamos 5 endidades: PerfilAnimal, PerfilCliente, PerfilOfertante y Lista.
+            Cada cual de estas mismas se relacionan entre si separandose en dos secciones, la del ofertante i la de cliente.
+            
+            En el caso de este diagrama, se encuentran:
+            
+            3 relaciones 1:n
+            1 relación m:n
+
+
+
+            <img src="IMG/Diagrama_App.drawio.png" height="400" width="850" alt="">
+            
+            </pre>
+            <h2 style="background:rgb(199, 158, 224); color:white; font-family: Times New Roman"><strong>          Diseño físico </strong></h2>
+            <div class="contenedor">
+                <img src="IMG/BDApp.png" height="900" width="425" alt=""> 
+
+                <pre>
+                En el caso del diseño físico, o lo que es lo mismo, 
+                la propia creación de la Base de Datos.
+                En pocas palabras, es el desarrollo de las entidades 
+                mencionadas en el diagrama anterior. 
+
+
+
+                Para poder convertir el diagrama a físico se trata
+                de un proceso simple, únicamente hemos de convertir 
+                las claves ajenas en un mecanismo para relacionar
+                las tablas.
+                En este caso con los <em>Foreign key</em> de las
+                claves primarias.
+
+
+
+                Además de las relaciones, tambien hemos introducido
+                los términos básicos de lo que se almacenará en 
+                es base de datos especificando los tipos de 
+                carácteres que puede aceptar cada dato y la 
+                longitud o cantidad de información que puede llegar
+                a almacenar.
+
+
+
+                Seguidamente se ha intoducido que datos son
+                indespensables para el funcionamiento de la 
+                aplicación, en palabras mas tecnicas, he 
+                indicado que valores tienen permitido ser nulos y 
+                cuales no.
+
+
+
+                Y por último he especificado que parametros deben 
+                seguir los datos en caso de su alteración, es decir,
+                especificar si se propaga el cambio o si se 
+                restringe mediante los comandos <em>on delete 
+                restrict/cascade</em>.
+                </pre>
+
+            </div>
+            <h2 style="background:rgb(199, 158, 224); color:white; font-family: Times New Roman"><strong>          Diagrama de Clases </strong></h2>
+        
+            <div class="contenedor"> 
+                <img src="IMG/DiagramaUMLApp_CarlaSerrano.png" height="700" width="900" alt=""> 
+            </div>
+           
+            <pre>
+            En el diagrama que se muestra en la parte superior, no solo se recopilan los datos a almacenar de cada apartado,
+            sino también cada método que contendrán las partes de la aplicación.
+
+            Es decir, preestablece las funciones que se accionaran en las pestañas donde aparezcan los elementos,
+            delcarando así el<em> funcionamiento básico</em> de cada parte de la app.
+
+            Y por último, en un aspecto más teórico, la dirección entre las entidades se ha establecido en respecto al 
+            elemento que interactúa primordialmente sobre al que recibe la acción o es un actor más secundario a la 
+            hora del funcionamiento.
+
+            </pre>
+            <h2 style="background:rgb(199, 158, 224); color:white; font-family: Times New Roman"><strong>          Diagrama de Casos de Uso </strong></h2>
+
+            <div class="contenedor"> 
+                <img src="IMG/DiagramaUsApp.png" height="500" width="900" alt=""> 
+            </div>
+            <pre>
+            Finalmente, para interpretar el diagrama de uso de forma simple:
+                · Muestra las partes esenciales, es decir, <em><strong>Crear la cuenta</strong></em>(Sea la de Ofertante o la de Cliente) 
+                y <em><strong>Configurar los perfiles</strong></em> (Tanto el de Cliente como el de los Animales a Adoptar)
+                
+                Lo único que los diferencia es el tipo de usuario que puede crear cada uno de ellos.
+
+                · Ademas de eso, encontramos las relaciones "<em><strong>include</strong></em>", que son aquellas que tienen una condición indispensable para 
+                que esta pueda efectuarse adecuadamente.  En este caso,  los Perfiles deben estar definidos para que se puedan printar
+                y/o interactuar.
+
+                · Y por último, estan las relaciones "<em><strong>extends</strong></em>" que son aquellas acciones que puedes hacer pero
+                no tienen porque efectuarse obligatoriamente, en este caso, la edición de los perfiles, que se pueden hacer o no la 
+                cantidad de veces que se precisen.
+            </pre>
+    
+
+            
+
+        
+
+           
+        
+        </main>
+        <footer>
+            <div class="footer">
+                <ul class="menu top">
+                    <li><a href="Inicio_doc.html"><strong>Inicio</strong></a></li>
+                    <li><a href="BD.html"><strong>Bases de Datos</strong></a></li>
+                    <li><a href="Programa_java.html"><strong>Programa</strong></a></li>
+                    <li><a href="Incidencias.html"><strong>Incidencias</strong></a></li>
+                    <li><a href="ResultadoFinal.html" target="_blank"><strong>Vista Gráfica</strong></a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+
+
+</body>
+</html>

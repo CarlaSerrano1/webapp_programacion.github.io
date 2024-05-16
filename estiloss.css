@@ -1,0 +1,146 @@
+/* Establece el fondo del cuerpo de la página con una imagen */
+body {
+    background: url(IMG/Fondo2.jpg);
+}
+
+
+/* Estilos para el banner principal */
+
+.banner {
+    background: linear-gradient(rgba(23, 26, 33, 0.8), rgba(23, 26, 33, 0.8)), url(IMG/cabecera2.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 280px;
+    position: relative;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Estilos para el texto en el banner */
+.banner h1 {
+    font-size: 36px;
+    margin-bottom: 3px;
+}
+
+
+/* Estilos para las columnas de contenido */
+.col {
+    width: 100%; /* Ancho completo */
+    max-width: 200px; /* Ancho máximo limitado */
+    display: inline-block; /* Elementos en línea */
+    vertical-align: top;
+    margin: 30px;
+}
+
+
+/* Contenedor principal de la página */
+.container {
+    width: 100%; /* Ancho completo */
+    max-width: 965px; /* Ancho máximo limitado */
+    margin: auto; /* Centra el contenido en la página */
+    background: white; /* Fondo blanco */
+}
+
+
+/* Estilos para el margen superior del menú */
+.top {
+    margin-top: 30px;
+}
+/* Estilos para el menú de navegación */
+.menu {
+    float: right; /* Alinea el menú a la derecha */
+}
+.menu li {
+    display: inline-block; /* Elementos de lista en línea */
+}
+
+.menu a {
+    color: black;
+    text-decoration: none;
+    padding: 20px;
+}
+
+.menu a:hover {
+    background: #d2a1ff; /* Cambia el color de fondo al pasar el mouse */
+}
+
+/* Estilos para el pie de página */
+.footer {
+    overflow: hidden;
+}
+.footer a {
+    color: black;
+    text-decoration: none;
+}
+
+.footer span {
+    float: left;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+
+
+/* Estilos para un contorno alrededor de un elemento */
+.contorno-marco {
+    display: inline-block;
+    border: 1px solid rgb(223, 223, 223);
+    padding: 10px;
+}
+
+
+/* Estilos para un fondo ajustado alrededor de un elemento */
+.fondo-ajustado {
+    display: inline-block;
+    background-color: #171717;
+    padding: 10px;
+}
+
+
+/*Para poder escribir al lateral de una fotografia*/
+.contenedor {
+    display: flex; /* Utilizamos flexbox para organizar los elementos */
+    align-items: flex-start; /* Alinear los elementos al principio verticalmente */
+}
+
+.contenedor img {
+    margin: 0 0px 0 30px; /* Ajusta el margen de todos los lados de la imagen (arriba, derecha, abajo, izquierda) */
+    margin-right: 0px; /* Ajusta el margen derecho para separar la imagen del texto */
+}
+
+.contenedor pre {
+    font-size: 12px; /* Define el tamaño del texto según tu preferencia */
+    align-self: flex-start; /* Alinea el texto al principio verticalmente */
+    margin-left: 0px;/* Ajusta el margen izquierdo del texto para reducir la separación con la imagen */
+}
+
+
+
+/* Para que la web se ajuste a los dispositivos*/
+@media screen and (max-width: 480px) {
+    .col {
+        width: 100%;
+        max-width: none;
+        margin: 15px 0;
+    }
+}
+
+/* Media Query para dispositivos medianos (tabletas) */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    /* Puedes ajustar el diseño según sea necesario */
+}
+
+/* Media Query para dispositivos grandes (portátiles y escritorios) */
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+    /* Puedes ajustar el diseño según sea necesario */
+}
+
+/* Media Query para pantallas extra grandes (mayores a 1200px) */
+@media screen and (min-width: 1201px) {
+    /* Puedes ajustar el diseño según sea necesario */
+}
